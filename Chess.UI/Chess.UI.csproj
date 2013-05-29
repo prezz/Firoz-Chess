@@ -1,0 +1,172 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{E9B1041E-77AD-41A2-BB64-D10088535638}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Chess.UI</RootNamespace>
+    <AssemblyName>Chess.UI</AssemblyName>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <SignAssembly>true</SignAssembly>
+    <AssemblyOriginatorKeyFile>Properties\ChessKey.snk</AssemblyOriginatorKeyFile>
+    <StartupObject>
+    </StartupObject>
+    <ApplicationIcon>Resources\Firoz.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AboutForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AboutForm.Designer.cs">
+      <DependentUpon>AboutForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BoardGraphic\GraphicHandler.cs" />
+    <Compile Include="BoardGraphic\BasicDesign.cs" />
+    <Compile Include="ConfigurationForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConfigurationForm.Designer.cs">
+      <DependentUpon>ConfigurationForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PawnPromotionDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PawnPromotionDialog.Designer.cs">
+      <DependentUpon>PawnPromotionDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PositionEditorForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PositionEditorForm.Designer.cs">
+      <DependentUpon>PositionEditorForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="MainForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="AboutForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>AboutForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BoardGraphic\BasicDesign\BlackBishop.gif" />
+    <EmbeddedResource Include="BoardGraphic\BasicDesign\BlackKing.gif" />
+    <EmbeddedResource Include="BoardGraphic\BasicDesign\BlackKnight.gif" />
+    <EmbeddedResource Include="BoardGraphic\BasicDesign\BlackPawn.gif" />
+    <EmbeddedResource Include="BoardGraphic\BasicDesign\BlackQueen.gif" />
+    <EmbeddedResource Include="BoardGraphic\BasicDesign\BlackRook.gif" />
+    <EmbeddedResource Include="BoardGraphic\BasicDesign\ChessBoard.jpg" />
+    <EmbeddedResource Include="BoardGraphic\BasicDesign\NoPiece.gif" />
+    <EmbeddedResource Include="BoardGraphic\BasicDesign\WhiteBishop.gif" />
+    <EmbeddedResource Include="BoardGraphic\BasicDesign\WhiteKing.gif" />
+    <EmbeddedResource Include="BoardGraphic\BasicDesign\WhiteKnight.gif" />
+    <EmbeddedResource Include="BoardGraphic\BasicDesign\WhitePawn.gif" />
+    <EmbeddedResource Include="BoardGraphic\BasicDesign\WhiteQueen.gif" />
+    <EmbeddedResource Include="BoardGraphic\BasicDesign\WhiteRook.gif" />
+    <EmbeddedResource Include="ConfigurationForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ConfigurationForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PawnPromotionDialog.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>PawnPromotionDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PositionEditorForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>PositionEditorForm.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PrevGame.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PrevMove.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NextMove.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NextGame.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\ChessKey.snk" />
+    <None Include="Resources\NewGame.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FlipView.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Chess.Model\Chess.Model.csproj">
+      <Project>{949972CC-8B65-44A8-A19C-1CBF0A29F1E8}</Project>
+      <Name>Chess.Model</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\Firoz.ico" />
+    <Content Include="Resources\EngineMove.bmp" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
